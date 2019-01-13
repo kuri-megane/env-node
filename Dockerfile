@@ -9,7 +9,7 @@ RUN apt install -y language-pack-ja
 ENV LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 
 # install node packages
-RUN apt install nodejs npm
+RUN apt install nodejs npm -y
 
 # update all other packages
 RUN apt upgrade
