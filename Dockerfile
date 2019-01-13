@@ -8,8 +8,9 @@ RUN apt update --fix-missing
 RUN apt install -y language-pack-ja
 ENV LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 
-# install node packages
-RUN apt install nodejs npm -y
+# install packages
+RUN apt install -y libfontconfig
+RUN apt install -y nodejs npm
 
 # update all other packages
 RUN apt upgrade -y
@@ -26,3 +27,6 @@ RUN npm install -g gitbook-cli
 
 # 作業ディレクトリ
 WORKDIR /app
+
+# ポート開放
+EXPOSE 4000

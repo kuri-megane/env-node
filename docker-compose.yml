@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   app:
-    build: env-src
+    build: .
     image: kurimegane/env-node:latest
     container_name: env-node
     environment:
@@ -9,3 +9,6 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - ./app:/app
+    tty: true
+    ports:
+      - 4000:4000
