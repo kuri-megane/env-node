@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 MAINTAINER kuri.megane <kuri.megane3060.4@gmail.com>
 
 # apt update
