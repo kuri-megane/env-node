@@ -11,6 +11,7 @@ ENV LANG=ja_JP.UTF-8 LC_ALL=ja_JP.UTF-8
 # install packages
 RUN apt install -y libfontconfig
 RUN apt install -y nodejs npm
+RUN apt install -y fonts-takao fonts-ipafont fonts-ipaexfont fonts-noto-cjk 
 
 # update all other packages
 RUN apt upgrade -y
