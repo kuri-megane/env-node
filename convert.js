@@ -5,9 +5,9 @@ var options = {
         html: true,
         breaks: true
     },
-    cssPath: "markdown.css"
+    cssPath: "/markdown-pdf/markdown.css"
 }
 
 markdownpdf(options)
-  .from("input.md")
-  .to("output.pdf", function () { console.log("Done") })
+  .from("/app/input.md")
+  .to("/app/output.pdf", function () { console.log("Done") })
