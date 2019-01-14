@@ -21,6 +21,7 @@ RUN apt clean
 
 # node.js の環境変数
 ENV NODE_ENV=dev
+ENV NODE_PATH=`npm root -g`
 
 # ツールのインストール
 RUN npm install -g markdown-pdf
@@ -28,6 +29,10 @@ RUN npm install -g gitbook-cli
 
 # 作業ディレクトリ
 WORKDIR /app
+
+# 必要なファイルのコピー
+COPY markdown.css 
+COPY convert.js
 
 # ポート開放
 EXPOSE 4000
